@@ -1,42 +1,23 @@
-import { useState } from "react";
+import { useEffect } from "react";
+import Header from "./components/Header/index";
+import Main from "./components/Main";
 
 function App() {
-  const [inputValue, setInputValue] = useState(0);
-  const [count, setCount] = useState(0);
-
-  const date = new Date();
-  date.setDate(date.getDate() + inputValue);
-
-  function handleInputChange(e) {
-    setInputValue(Number(e.target.value));
-  }
-
-  function handleRangeChange(e) {
-    setCount(Number(e.target.value));
-  }
+  useEffect(function () {
+    fetch("http://localhost:9000/questions")
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch((arr) => console.error("Error"));
+  });
 
   return (
-    <div>
-      <input type="range" min="1" max="10" onChange={handleRangeChange}></input>
-      <p>{count}</p>
-      <button onClick={() => setInputValue(inputValue + count)}>+</button>
-
-      <input
-        value={inputValue}
-        type="number"
-        onChange={handleInputChange}
-      ></input>
-      <button onClick={() => setInputValue(inputValue - count)}>-</button>
-      <p>
-        {date.toLocaleDateString(undefined, {
-          weekday: "short",
-          month: "short",
-          day: "2-digit",
-          year: "numeric",
-        })}
-      </p>
-      <button onClick={() => setInputValue(0)}>Reset</button>
-    </div>
+    <>
+      <Header />
+      <Main>
+        <p>1/15</p>
+        <p>question</p>
+      </Main>
+    </>
   );
 }
 
