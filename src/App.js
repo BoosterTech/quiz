@@ -57,6 +57,7 @@ function reducer(state, action) {
         status: "finished",
         highscore:
           state.points > state.highscore ? state.points : state.highscore,
+        timeRemaining: 5,
       };
     case "restart":
       return {
@@ -68,8 +69,8 @@ function reducer(state, action) {
     case "tick":
       return {
         ...state,
-        status: state.timeRemaining <= 0 ? "finished" : state.status,
-        timeRemaining: state.timeRemaining - 1,
+        timeRemaining: state.timeRemaining === 0 ? 5 : state.timeRemaining - 1,
+        status: state.timeRemaining === 0 ? "finished" : state.status,
       };
     default:
       throw new Error("Action unknown");
