@@ -8,17 +8,16 @@ function FinishScreen({ points, maxPossiblePoints, highscore, dispatch }) {
   if (percentage >= 0 && percentage < 50) emoji = "😊";
   if (percentage === 0) emoji = "😒";
 
-  if (percentage)
-    return (
-      <>
-        <p>
-          <span>{emoji}</span> You scored <strong>{points}</strong> points out
-          of {maxPossiblePoints} ({Math.ceil(percentage)}%)
-        </p>
-        <p>Highscore: {highscore} points</p>
-        <button onClick={() => dispatch({ type: "restart" })}>Restart</button>
-      </>
-    );
+  return (
+    <>
+      <p>
+        <span>{emoji}</span> You scored <strong>{points}</strong> points out of{" "}
+        {maxPossiblePoints} ({Math.ceil(percentage)}%)
+      </p>
+      <p>Highscore: {highscore} points</p>
+      <button onClick={() => dispatch({ type: "restart" })}>Restart</button>
+    </>
+  );
 }
 
 export default FinishScreen;
