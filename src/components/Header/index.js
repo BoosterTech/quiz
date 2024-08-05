@@ -1,11 +1,12 @@
 import logo from "../Header/logo.png";
-import { Image, Text, Wrapper } from "../DateCounter/styled";
+import { Image, Text } from './styled'
+import { Wrapper } from "./styled";
 
 function Header() {
   return (
     <Wrapper>
       <Image src={logo} alt="logo" />
-      <Text>The React Quiz</Text>
+      <Text>THE REACT QUIZ</Text>
     </Wrapper>
   );
 }
