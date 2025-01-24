@@ -1,6 +1,10 @@
 import { useEffect } from "react";
+import { Wrapper } from "./styled";
 
 function Timer({ dispatch, timeRemaining }) {
+  const min = Math.floor(timeRemaining / 60);
+  const seconds = timeRemaining % 60;
+
   useEffect(
     function () {
       const timerId = setInterval(() => {
@@ -11,7 +15,13 @@ function Timer({ dispatch, timeRemaining }) {
     [dispatch]
   );
 
-  return <div>{timeRemaining}</div>;
+  return (
+    <Wrapper>
+      {min < 10 && "0"}
+      {min}:{seconds < 10 && "0"}
+      {seconds}
+    </Wrapper>
+  );
 }
 
 export default Timer;

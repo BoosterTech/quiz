@@ -1,3 +1,5 @@
+import { Info, Progress, Wrapper } from "./styled";
+
 function ProgressBar({
   index,
   numQuestions,
@@ -6,20 +8,21 @@ function ProgressBar({
   maxPossiblePoints,
 }) {
   return (
-    <div>
-      <progress
+    <Wrapper>
+      <Progress
         value={index + Number(answer !== null)}
         max={numQuestions}
-      ></progress>
-
-      <span>
-        Question <strong>{index + 1}</strong> / {numQuestions}
-      </span>
-      <span>
-        {" "}
-        {points} / {maxPossiblePoints}
-      </span>
-    </div>
+      ></Progress>
+      <Info>
+        <span>
+          Question <strong>{index + 1}</strong> / {numQuestions}
+        </span>
+        <span>
+          {" "}
+          {points} / {maxPossiblePoints}
+        </span>
+      </Info>
+    </Wrapper>
   );
 }
 

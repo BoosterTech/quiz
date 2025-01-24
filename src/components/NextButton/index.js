@@ -1,12 +1,14 @@
+import { Button } from "./styled";
+
 function NextButton({ answer, dispatch, numQuestions, index }) {
   if (answer == null) return;
   if (index < numQuestions - 1)
     return (
-      <button onClick={() => dispatch({ type: "nextQuestion" })}>next</button>
+      <Button onClick={() => dispatch({ type: "nextQuestion" })}>Next</Button>
     );
   if (index === numQuestions - 1)
     return (
-      <button onClick={() => dispatch({ type: "finished" })}>Finish</button>
+      <Button onClick={() => dispatch({ type: "finished" })}>Finish</Button>
     );
 }
 

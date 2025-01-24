@@ -7,4 +7,6 @@ export const Wrapper = styled.div`
   left: 50%;
   transform: translate(-50%);
   font-size: 16px;
+  max-width: 500px;
+  width: 500px;
 `;

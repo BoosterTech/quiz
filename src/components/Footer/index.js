@@ -1,5 +1,7 @@
+import { Wrapper } from "./styled";
+
 function Footer({ children }) {
-  return <footer>{children}</footer>;
+  return <Wrapper>{children}</Wrapper>;
 }
 
 export default Footer;

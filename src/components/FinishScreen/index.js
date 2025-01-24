@@ -1,3 +1,6 @@
+import { Button } from "../StartScreen/styled";
+import { RestartContainer, ScoreWrapper } from "./styled";
+
 function FinishScreen({ points, maxPossiblePoints, highscore, dispatch }) {
   const percentage = (points / maxPossiblePoints) * 100;
 
@@ -10,12 +13,14 @@ function FinishScreen({ points, maxPossiblePoints, highscore, dispatch }) {
 
   return (
     <>
-      <p>
-        <span>{emoji}</span> You scored <strong>{points}</strong> points out of{" "}
+      <ScoreWrapper>
+        <span>{emoji}</span> You scored <strong>{points}</strong> out of{" "}
         {maxPossiblePoints} ({Math.ceil(percentage)}%)
-      </p>
-      <p>Highscore: {highscore} points</p>
-      <button onClick={() => dispatch({ type: "restart" })}>Restart</button>
+      </ScoreWrapper>
+      <p>(Highscore: {highscore} points)</p>
+      <RestartContainer>
+      <Button onClick={() => dispatch({ type: "restart" })}>Restart quiz</Button>
+      </RestartContainer>
     </>
   );
 }
