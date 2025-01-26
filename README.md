@@ -19,7 +19,7 @@ The app is built using **React** and makes use of the **useReducer** hook for ma
 ## How to Run
 
 1. Clone the repository:  
-   `git clone https://github.com/YourUsername/React-Quiz-App.git`
+   `git clone https://github.com/BoosterTech/react-quiz.git`
 
 2. Navigate into the project directory:  
    `cd React-Quiz-App`
