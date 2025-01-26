@@ -96,9 +96,12 @@ function App() {
 
   useEffect(function () {
     // fetch("/questions.json")
-    fetch("https://67961168bedc5d43a6c42f3e.mockapi.io/questions")
+    fetch("https://67961168bedc5d43a6c42f3e.mockapi.io/api/questions/")
       .then((res) => res.json())
-      .then((data) => dispatch({ type: "dataReceived", payload: data }))
+      .then((data) => {
+        console.log("data", data);
+        dispatch({ type: "dataReceived", payload: data });
+      })
       .catch(() => dispatch({ type: "dataFailed" }));
   }, []);
 
