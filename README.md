@@ -1,4 +1,4 @@
-# React Quiz App
+# React Quiz App ❓
 
 The **React Quiz App** is a quiz application designed to test your knowledge of React. The app presents users with **30 multiple-choice questions** that cover key concepts and features of React. After completing the quiz, users can see their score based on how many questions they answered correctly.
 
@@ -19,7 +19,7 @@ The app is built using **React** and makes use of the **useReducer** hook for ma
 ## How to Run
 
 1. Clone the repository:  
-   `git clone https://github.com/YourUsername/React-Quiz-App.git`
+   `git clone https://github.com/BoosterTech/react-quiz.git`
 
 2. Navigate into the project directory:  
    `cd React-Quiz-App`
