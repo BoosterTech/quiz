@@ -96,7 +96,7 @@ function App() {
 
   useEffect(function () {
     // fetch("/questions.json")
-    fetch("https://boostertech.github.io/quiz/questions/")
+    fetch("https://boostertech.github.io/quiz/questions.json")
       .then((res) => res.json())
       .then((data) => {
         console.log("data", data);
