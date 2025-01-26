@@ -1,4 +1,4 @@
-# React Quiz App
+#❓ React Quiz App
 
 The **React Quiz App** is a quiz application designed to test your knowledge of React. The app presents users with **30 multiple-choice questions** that cover key concepts and features of React. After completing the quiz, users can see their score based on how many questions they answered correctly.
 
