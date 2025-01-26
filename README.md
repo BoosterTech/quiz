@@ -1,12 +1,12 @@
 # React Quiz App
 
-The **React Quiz App** is a quiz application designed to test your knowledge of React. The app presents users with **15 multiple-choice questions** that cover key concepts and features of React. After completing the quiz, users can see their score based on how many questions they answered correctly.
+The **React Quiz App** is a quiz application designed to test your knowledge of React. The app presents users with **30 multiple-choice questions** that cover key concepts and features of React. After completing the quiz, users can see their score based on how many questions they answered correctly.
 
 The app is built using **React** and makes use of the **useReducer** hook for managing the state. This hook is used to handle the quiz logic, such as tracking the user's answers, moving through the questions, and calculating the final score. By using **useReducer**, the app is able to maintain clear and efficient state management, making it scalable and easy to handle more complex quiz logic in the future.
 
 ## Key Features
 
-- **15 React-related Questions**: Covers a range of React topics, such as components, hooks, state management, and lifecycle methods.
+- **30 React-related Questions**: Covers a range of React topics, such as components, hooks, state management, and lifecycle methods.
 - **useReducer Hook**: Utilized for managing the state of the quiz, such as tracking the current question, answers, and score.
 - **Interactive Interface**: Provides an intuitive UI that allows users to navigate through the questions easily.
 - **Score Calculation**: After finishing the quiz, users can view their total score based on correct answers.
@@ -15,10 +15,6 @@ The app is built using **React** and makes use of the **useReducer** hook for ma
 
 - **React**: For building the interactive user interface and managing state.
 - **useReducer**: For handling state management, such as answers and score calculation.
-
-## Project Overview
-
-This project showcases my ability to build functional applications using **React** and manage complex state with **useReducer**, offering both a practical learning experience and a smooth user interface.
 
 ## How to Run
 
