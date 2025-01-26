@@ -95,7 +95,8 @@ function App() {
   );
 
   useEffect(function () {
-    fetch("/questions.json")
+    // fetch("/questions.json")
+    fetch("https://boostertech.github.io/quiz/questions.json")
       .then((res) => res.json())
       .then((data) => dispatch({ type: "dataReceived", payload: data }))
       .catch(() => dispatch({ type: "dataFailed" }));
